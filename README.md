@@ -2,6 +2,13 @@
 
 All your social media notifications in one place.
 
+### Build 
+
+1. Install Node.js
+2. `npm install`
+3. `gulp build`
+4. `gulp run`
+
 ### Status
 
 The application just exists in our minds for now. 
@@ -35,3 +42,11 @@ We'll try to keep the design modular so that anyone can add a new source of noti
 
 * Github
 * Stack Overflow
+
+### Features
+
+*These points will later be converted to issues for some discussion.*
+
+The chrome extension (chime) only clears a notification when you manually click - "Mark as read" or click on the link. But our app should have something like 'seen' - it should be able to detect when the user has viewed the notifications and should clear the counter.
+
+We could change the trayicon of the application to a number that displays the unread notif count.
