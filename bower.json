@@ -1,0 +1,30 @@
+{
+  "name": "Ping",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "mousetrap": "~1.4.6"
+  },
+  "version": "0.1.0",
+  "homepage": "https://github.com/dufferzafar/Ping",
+  "authors": [
+    "Shadab Zafar <dufferzafar0@gmail.com>"
+  ],
+  "description": "All your social notifications in one place.",
+  "main": "app/index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "facebook"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}
