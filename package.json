@@ -1,6 +1,6 @@
 {
   "main": "index.html",
-  "name": "Social-Notifs",
+  "name": "Ping",
   "version": "0.1.0",
   "description": "All your social notifications in one place.",
   "author": "Shadab Zafar",
@@ -10,7 +10,7 @@
     "node-webkit"
   ],
   "window": {
-    "title": "Social-Notifs",
+    "title": "Ping",
     "icon": "icons/main.png",
     "toolbar": true,
     "frame": true,
@@ -25,12 +25,12 @@
   "license": "GPL Version 3",
   "repository": {
     "type": "git",
-    "url": "http://github.com/dufferzafar/social-notifs"
+    "url": "http://github.com/dufferzafar/Ping"
   },
   "bugs": {
-    "url": "https://github.com/dufferzafar/social-notifs/issues"
+    "url": "https://github.com/dufferzafar/Ping/issues"
   },
-  "homepage": "https://github.com/dufferzafar/social-notifs",
+  "homepage": "https://github.com/dufferzafar/Ping",
   "devDependencies": {
     "bower": "~1.3.5",
     "gulp": "~3.6.2",
@@ -51,6 +51,6 @@
   "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node_modules/.bin/bower install"
+    "postinstall": "node_modules\\.bin\\bower install"
   }
 }

@@ -1,4 +1,4 @@
-# Social Notif
+# Ping
 
 All your social media notifications in one place.
 
@@ -23,7 +23,11 @@ Also worth seeing is the Growl app which is available for all three common platf
 
 I once tried using Growl but couldn't get it to work properly.
 
-### Architecture
+### The plan
+
+As most of the core work has already been done in Chime, our first focus will be to create a basic notification system. The aim will be to make it look as good as Chrome's notifs, but I'll even be happy with something like [humane.js](http://wavded.github.io/humane-js/)
+
+Once we have the notifications going, we'll start by adding Facebook support, if we can do that the rest of the will come easily too (or so I hope.)
 
 We'll try to keep the design modular so that anyone can add a new source of notification easily.
 
@@ -32,6 +36,7 @@ We'll try to keep the design modular so that anyone can add a new source of noti
 * Facebook
 * Twitter
 
+* Slack
 * Quora
 * Reddit
 * Goodreads
