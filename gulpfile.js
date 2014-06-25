@@ -53,7 +53,7 @@ gulp.task('build-nw', ['copy', 'clean-release'], function () {
 });
 
 gulp.task('run', function () {
-    exec('build/release/Social-Notifs/win/nw.exe')
+    exec('build/release/Ping/win/nw.exe')
 });
 
 gulp.task('build', ['build-nw']);
