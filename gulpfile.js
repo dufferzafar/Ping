@@ -1,9 +1,23 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
-    flatten = require('gulp-flatten'),
     rimraf = require('rimraf'),
+    flatten = require('gulp-flatten'),
+    less = require('gulp-less'),
+    minifycss = require('gulp-minify-css'),
     exec = require('child_process').spawn,
     NwBuilder = require('node-webkit-builder');
+
+/**
+ * ------------------------------------------------------------ Start afresh
+ */
+
+gulp.task('clean-release', function (cb) {
+    rimraf('./build/release', cb);
+});
+
+/**
+ * ------------------------------------------------------------ Copy Sources
+ */
 
 gulp.task('copy-js', function () {
     return gulp.src('vendor/**/*.min.js')
@@ -24,11 +38,22 @@ gulp.task('copy-app', function () {
 
 gulp.task('copy', ['copy-js', 'copy-css', 'copy-app']);
 
-gulp.task('clean-release', function (cb) {
-    rimraf('./build/release', cb);
+/**
+ * ------------------------------------------------------------ Less Compilation
+ */
+
+gulp.task('less', function() {
+  return gulp.src('app/less/styles.less')
+      .pipe(less())
+      .pipe(minifycss())
+      .pipe(gulp.dest('./build/src/css'))
 });
 
-gulp.task('build-nw', ['copy', 'clean-release'], function () {
+/**
+ * ------------------------------------------------------------ Build the app
+ */
+
+gulp.task('build-nw', ['less', 'copy', 'clean-release'], function () {
     var nw = new NwBuilder({
         platforms: ['win'],
         files: 'build/src/**',
@@ -51,6 +76,10 @@ gulp.task('build-nw', ['copy', 'clean-release'], function () {
         console.error(error);
     });
 });
+
+/**
+ * ------------------------------------------------------------ Run!
+ */
 
 gulp.task('run', function () {
     exec('build/release/Ping/win/nw.exe')
